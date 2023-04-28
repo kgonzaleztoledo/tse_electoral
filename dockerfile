@@ -11,7 +11,7 @@ COPY . .
 RUN rm -rf /app/vendor
 RUN rm -rf /app/composer.lock
 RUN composer install
-RUN composer require laravel/tse_electoral spiral/roadrunner
+RUN composer require kgonzaleztoledo/tse_electoral spiral/roadrunner
 COPY .env.example .env
 RUN mkdir -p /app/storage/logs
 RUN php artisan cache:clear
