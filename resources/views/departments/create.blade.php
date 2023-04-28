@@ -2,6 +2,7 @@
 
 @section('content')
 
+      <!--Inicia del Menu slider -->
 
     <div class="card shadow">
         <div class="card-header border-0">
