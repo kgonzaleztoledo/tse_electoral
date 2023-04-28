@@ -33,4 +33,4 @@ jobs:
           file: ./dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/tse_electoral:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/Laravel:latest
