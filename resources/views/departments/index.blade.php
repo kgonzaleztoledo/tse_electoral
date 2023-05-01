@@ -35,10 +35,74 @@
                                         <h3 class="mb-0">Departamentos</h3>
                                         </div>
                                         <div class="col text-right">
-                                        <a href="{{url('categorias/departamentos/create')  }}" class="btn btn-sm btn-primary">Nuevo Departamento</a>
+                                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                                Nuevo Departamento
+                                            </button>
                                         </div>
+
+                                      <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h4 class="modal-title" id="exampleModalLabel">Formulario para Ingresar Nuevo Departamento</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="card-body">
+
+                                                        <form action="{{ url('/categorias/departamentos') }}" method="POST">
+                                                            @csrf
+
+                                                            <div class="form-group">
+                                                                    <label form="name"> Nombre del Departamento</label>
+                                                                    <input type="text" name="name" class="form-control" placeholder="Ingrese el nombre del Departamento">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label form="description"> Descripción</label>
+                                                                <input type="text" name="description" class="form-control">
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                <button type="submit" class="btn btn-primary">Registrar Departamento</button>
+                                            </form>
+                                            </div>
+                                            </div>
+                                            </div>
+                                       </div>
                                     </div>
                                     </div>
+
+
+                                     <div class="card-body">
+                                        @if(session('notification'))
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                                            {{ session('notification') }}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        @endif
+
+                                        @if($errors->any())
+                                        @foreach ($errors->all() as $error )
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                                            <span class="alert-text"><strong></strong> {{ $error }}</span>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        @endforeach
+                                        @endif
+
+                                     </div>
                                     <div class="table-responsive">
                                     <!-- Projects table -->
                                     <table class="table align-items-center table-flush">
@@ -51,8 +115,6 @@
                                         </thead>
                                         <tbody>
                                             @foreach ($departments as $department )
-
-
                                             <tr>
                                                 <th scope="row">
                                                 {{ $department->id }}
@@ -61,7 +123,7 @@
                                                {{$department->name}}
                                                 </td>
                                                 <td>
-                                                    <a href="" class="btn btn-sm btn-primary">Editar </a>
+                                                    <a href="{{ url('categorias/departamentos/'.$department->id.'/edit')}}" class="btn btn-sm btn-primary">Editar </a>
                                                     <a href="" class="btn btn-sm btn-danger">Delete </a>
                                                 </td>
 
@@ -88,14 +150,12 @@
                                         <thead class="thead-light">
                                             <tr>
                                                 <th scope="col">Id</th>
-                                                <th scope="col">Nombre del Departamento</th>
+                                                <th scope="col">Nombre del Municipio</th>
                                                 <th scope="col">Options</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach ($municipalitys as $municipality )
-
-
                                             <tr>
                                                 <th scope="row">
                                                 {{ $municipality->id }}
@@ -114,11 +174,13 @@
                                     </table>
                                 </div>
                             </div>
+
+
                             <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
                                 <div class="card-header border-0">
                                     <div class="row align-items-center">
                                         <div class="col">
-                                        <h3 class="mb-0">Page visits</h3>
+                                        <h3 class="mb-0">Identidades</h3>
                                         </div>
                                         <div class="col text-right">
                                         <a href="#!" class="btn btn-sm btn-primary">See all</a>

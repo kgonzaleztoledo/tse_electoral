@@ -28,10 +28,10 @@
                                 <div class="card-header border-0">
                                     <div class="row align-items-center">
                                         <div class="col">
-                                        <h3 class="mb-0">Nuevo departamento</h3>
+                                        <h3 class="mb-0">Editar Departamento</h3>
                                         </div>
                                         <div class="col text-right">
-                                        <a href="{{url('categorias/departamentos')  }}" class="btn btn-sm btn-success">
+                                        <a href="{{url('categorias')  }}" class="btn btn-sm btn-success">
                                             <i class="fas fa-chevron-left"> </i>
                                             Regresar</a>
                                         </div>
@@ -58,19 +58,20 @@
                             @endforeach
                         @endif
 
-                        <form action="{{ url('categorias/departamentos') }}" method="POST">
+                        <form action="{{ url('categorias/departamentos/'.$department->id) }}" method="POST">
                             @csrf
+                            @method('PUT')
 
                             <div class="form-group">
                                     <label form="name"> Nombre del Departamento</label>
-                                    <input type="text" name="name" class="form-control form-control-sm" placeholder="Ingrese el nombre del Departamento" required>
+                                    <input type="text"  name="name" class="form-control form-control-sm" value="{{old('name', $department->name)}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label form="description"> Descripción</label>
-                                <input type="text" name="description" class="form-control">
+                                <input type="text" name="description" class="form-control" value="{{ old('description', $department->description) }}">
                             </div>
-                            <button type="submit" class="btn btn-sm-primary">Crear departamento</button>
+                            <button type="submit" class="btn btn-primary primary-sm">Actualizar Departamento</button>
 
 
 
