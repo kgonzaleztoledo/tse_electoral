@@ -17,6 +17,8 @@
   <link href="{{ asset('js/plugins/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="{{ asset('css/argon-dashboard.css?v=1.1.2') }}" rel="stylesheet" />
+  <link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet" />
+  <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css" rel="styleshhet"  />
 </head>
 
 <body class="">
@@ -156,8 +158,8 @@
   <script src="{{ asset('js/plugins/chart.js/dist/Chart.min.js') }}"></script>
   <script src="{{ asset('js/plugins/chart.js/dist/Chart.extension.js') }}"></script>
   <!--   Argon JS   -->
-  <script src="{{ asset('js/argon-dashboard.min.js?v=1.1.2') }}"></script>
-  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+
+    @yield('scripts')
   <script>
     window.TrackJS &&
       TrackJS.install({

@@ -37,7 +37,7 @@
 
                                       <!-- Modal -->
                                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-dialog modal-lg" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                 <h4 class="modal-title" id="exampleModalLabel">Formulario Participantes</h4>
@@ -45,33 +45,167 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <div class="card-body">
+                                                <div class="card-body ">
+                                                        <div class="modal-body">
 
                                                         <form action="{{ url('participantes') }}" method="POST">
                                                             @csrf
 
-                                                            <div class="form-group">
-                                                                    <label form="name"> Nombres</label>
-                                                                    <input type="text" name="name" class="form-control" placeholder="Ingrese el nombre del Departamento">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                    Fecha Capacitación: <input type="date" name="activity_date" class="form-control" placeholder="Ingrese Fecha" required>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-8">
+
+                                                                    <div class="form-group">
+                                                                        Tipo de Capacitación:
+                                                                        <input type="text" name="activity_name" class="form-control" placeholder="Ingrese nombre de la Actividad" required>
+                                                                    </div>
+                                                                </div>
+
                                                             </div>
 
-                                                            <div class="form-group">
-                                                                <label form="description"> Descripción</label>
-                                                                <input type="text" name="description" class="form-control">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                     Nombres:
+                                                                        <input type="text" name="name" class="form-control" placeholder="Ingrese Nombres" required>
+                                                                     </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        Apellidos:
+                                                                        <input type="text" name="last_name" class="form-control" placeholder="Ingrese Apellidos" required>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        Cui:
+                                                                        <input type="text" name="cui" class="form-control" placeholder="Ingrese CUI">
+                                                                    </div>
+                                                                </div>
                                                             </div>
+
+                                                            <div class="row">
+                                                                <div class="col-md-2">
+                                                                    <div class="form-group">
+                                                                     Edad:
+                                                                        <input type="number" name="age" class="form-control" placeholder="" required>
+                                                                     </div>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    <div class="form-group">
+                                                                        Tiene alguna discapacidad:
+                                                                        <select  name="disability" class="form-control" >
+                                                                            <option value="" selected disabled hidden>Selecciona Optición</option>
+                                                                            <option value="NO">NO</option>
+                                                                            <option value="SI">SI</option>
+                                                                          </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-5">
+                                                                    <div class="form-group">
+                                                                        Tipo de discapacidad:
+
+                                                                        <select  name="type_disability" class="form-control" >
+                                                                            <option value="" selected disabled hidden>Selecciona Opción</option>
+                                                                            <option value="Ningua">Ninguna</option>
+                                                                            <option value="Discapacidad Fisica">Discapacidad Fisica</option>
+                                                                            <option value="Discapacidad Visual">Discapacidad Visual</option>
+                                                                            <option value="Discapacidad Auditiva">Discapacidad Auditiva</option>
+                                                                            <option value="Discapacidad Sensorial">Discapacidad Sensorial</option>
+                                                                            <option value="Discapacidad Multiple">Discapacidad Multiple</option>
+                                                                            <option value="Discapacidad Psicosocial">Discapacidad Psicosocial</option>
+                                                                            <option value="Discapacidad Mental">Discapacidad Mental</option>
+                                                                          </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                     Departamento:
+                                                                        <select name="" class="form-control" id="select-department" required>
+                                                                            <option value="">Seleccione Departamento </option>
+                                                                                @foreach ($departments as $department )
+                                                                                <option value="{{ $department->id }}">{{ $department->name }}</option>
+
+                                                                                @endforeach
+                                                                        </select>
+                                                                     </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        Municipio:
+                                                                        <select name="municipality_id" class="form-control"  id="select-municipio" required>
+                                                                            <option value="" selected disabled hidden>Seleccione Municipio </option>
+                                                                                @foreach ($municipios as $municipio )
+                                                                                <option value="{{ $municipio->id }}">{{ $municipio->name }}</option>
+
+                                                                                @endforeach
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        Genero:
+                                                                        <select name="generous_id" class="form-control" id="select-department" required>
+                                                                            <option value="">Seleccione Género </option>
+                                                                                @foreach ($generos as $genero )
+                                                                                <option value="{{ $genero->id }}">{{ $genero->name }}</option>
+
+                                                                                @endforeach
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                     Grupo Linguistico:
+                                                                     <select name="linguistics_id" class="form-control" id="select-department" required>
+                                                                        <option value="">Seleccione Grupo Linguisticos </option>
+                                                                            @foreach ($linguistics as $linguistic )
+                                                                            <option value="{{ $linguistic->id }}">{{ $linguistic->name }}</option>
+
+                                                                            @endforeach
+                                                                    </select>
+                                                                     </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        Identidad Cultural:
+                                                                        <select name="identities_id" class="form-control" id="select-department" required>
+                                                                            <option value="">Seleccione Grupo Cultural </option>
+                                                                                @foreach ($identitys as $identity )
+                                                                                <option value="{{ $identity->id }}">{{ $identity->name }}</option>
+
+                                                                                @endforeach
+                                                                        </select>
+                                                                     </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                           <input type="hidden" name="users_id" value="{{ auth()->user()->id }}">
                                                     </div>
-                                                </div>
-                                                <div class="modal-footer">
+                                            </div>
+                                            <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                <button type="submit" class="btn btn-primary">Registrar Departamento</button>
+                                                <button type="submit" class="btn btn-primary">Registrar Participante</button>
                                             </form>
                                             </div>
-                                            </div>
-                                            </div>
-                                       </div>
-                                    </div>
-                                    </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
 
 
                                      <div class="card-body">
@@ -100,49 +234,24 @@
                                      </div>
                                     <div class="table-responsive">
                                     <!-- Projects table -->
-                                    <table class="table align-items-center table-flush">
+                                    <table  id="idparticipants" class="table align-items-center table-flush">
                                         <thead class="thead-light">
                                             <tr>
                                                 <th scope="col">Id</th>
-                                                <th scope="col">Nombre Completo</th>
-                                                <th scope="col">CUI</th>
+                                                <th scope="col">Fecha</th>
+                                                <th scope="col">Programa de Formación</th>
+                                                <th scope="col">Nombres</th>
+                                                <th scope="col">Apellidos</th>
                                                 <th scope="col">Edad</th>
-                                                <th scope="col">Municipio</th>
-                                                <th scope="col">Departamento</th>
-                                                <th scope="col">Options</th>
+                                                <th scope="col">Municipios</th>
+                                                <th scope="col"> &nbsp; </th>
+
+
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($participants as $participant )
-                                            <tr>
-                                                <td>
-                                                {{ $participant->id }}
-                                                </td>
-                                                <td>
-                                                    <i class="ni ni-single-02 text-yellow"></i>   {{$participant->name.", ".$participant->last_name }}
-                                                </td>
-                                                <td>
-                                                    {{ $participant->cui }}
-                                                </td>
-                                                <td>
-                                                    {{ $participant->age }}
-                                                </td>
-                                                <td>
-                                                    {{ $participant->Municipality->name }}
-                                                </td>
-
-                                                <td>
-                                                    {{ $participant->Municipality->Department->name }}
-                                                </td>
-
-                                                <td>
-                                                    <a href="{{ url('participantes/'.$participant->id.'/edit')}}" class="btn btn-sm btn-primary">Editar </a>
-                                                    <a href="" class="btn btn-sm btn-danger">Delete </a>
-                                                </td>
-
-                                            </tr>
-                                            @endforeach
                                         </tbody>
+
                                     </table>
                                 </div>
                             </div>
@@ -165,4 +274,70 @@
         </div>
 
     </div>
-@endsection
+
+
+
+@stop
+
+@section('scripts')
+<script src="{{ asset('js/argon-dashboard.min.js?v=1.1.2') }}"></script>
+<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+      <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js">    </script>
+
+       <script src="{{ asset('js/select_department.js') }}"></script>
+
+     <script>
+              $(document).ready(function () {
+              $('#idparticipants').DataTable({
+
+                    "responsive":true,
+                    "serverSide": true,
+                    "ajax": "{{ url('api/Participants')  }}",
+                    "columns": [
+                        {data:'id',
+                        name: 'id'},
+                        {data:'activity_date',
+                        name: 'activity_date'},
+                        {data:'activity_name',
+                        name: 'activity_name'},
+                        {data:'name',
+                        name: 'name'},
+                        {data:'last_name',
+                        name: 'last_name'},
+                        {data:'age',
+                        name: 'age'},
+                        {data:'municipio',
+                        name: 'municipalities.name'},
+                        {data:'btn',
+                        name: 'btn'},
+                     ],
+                     "pageLength": 5,
+                    "language":{
+                        "info":"_TOTAL_ Registros",
+                        "search": "Buscar",
+                        "show": "Ver",
+                        "zeroRecords": "Sin resultados encontrados",
+                        "paginate": {
+                            "next": 'Siguiente',
+                            "previous": "Anterior",
+
+                        },
+                        "lengthMenu":'Mostrar <select>'+
+                                     '<option value="5">5</option>'+
+                                     '<option value="10">10</option>'+
+                                     '<option value="25">25</option>'+
+                                     '<option value="-1">Todos</option>'+
+                                     '</select> registros'
+
+                    }
+
+              });
+              });
+
+
+      </script>
+@stop
+
+
