@@ -7,15 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Department extends Model
 {
-    protected $fillable = ['name'];
 
-    public function Municipalitys()
+    protected $table ="departments";
+
+    public function municipalitys()
 
     {
 
-        return $this->hasMany('App\Models\Municipality', 'department_id', 'id');
+        return $this->hasMany('App\Models\Municipality');
 
 
     }
+
+
    // use HasFactory;
 }

@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Participant;
 use App\Models\Municipality;
 use App\Models\Department;
-use App\Models\Gender;
-use App\Models\Identity;
-use App\Models\Linguistic;
+use App\Models\gender;
+use App\Models\identity;
+use App\Models\linguistic;
 
 
 class ParticipantController extends Controller
@@ -21,9 +21,9 @@ class ParticipantController extends Controller
 
         $departments= Department::all()->sortBy('name');
         $municipios= Municipality::all()->sortBy("name");
-        $generos= Gender::all()->sortBy("name");
-        $identitys= Identity::all()->sortBy("name");
-        $linguistics= Linguistic::all()->sortBy("name");
+        $generos= gender::all()->sortBy("name");
+        $identitys= identity::all()->sortBy("name");
+        $linguistics= linguistic::all()->sortBy("name");
 
         // $participants = Participant::all()->sortBy("municipality_id");
         //dd($participants);
@@ -67,8 +67,8 @@ class ParticipantController extends Controller
 
     public function show($id){
         $participants = Participant::find($id);
-        dd($participants);
-        return view('departments.show', compact('participants'));
+        //dd($participants);
+        return view('departments.show', compact('id'));
 
 
         //dd($department);

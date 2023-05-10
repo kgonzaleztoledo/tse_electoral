@@ -15,8 +15,8 @@ class CategoryController extends Controller
     }
 
     public function index(){
-        $departments = Department::all();
-        $municipalitys = Municipality::all();
+        $departments = Department::paginate(5);
+        $municipalitys = Municipality::orderBy(asc)->paginate(5);
         //dd($departments, $municipalitys);
         return view('departments.index', compact('departments','municipalitys'));
 

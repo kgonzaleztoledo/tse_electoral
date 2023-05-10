@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+    <br><br>
     <div class="card shadow">
         <div class="card-header border-0">
 
@@ -131,6 +131,9 @@
                                             @endforeach
                                         </tbody>
                                     </table>
+                                 </div>
+                                 <div class="card-body">
+                                    {{ $departments->links() }}
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
@@ -172,6 +175,19 @@
                                             @endforeach
                                         </tbody>
                                     </table>
+                                </div>
+                                <div class="card-body">
+
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-center">
+
+
+                                    {{ $municipalitys->links() }}
+                                        </ul>
+                                      </nav>
+
+
+
                                 </div>
                             </div>
 

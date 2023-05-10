@@ -4,28 +4,24 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Municipality;
-use App\Models\Department;
+
 
 
 class Municipality extends Model
+
 {
+    protected $table ="municipalities";
 
-    protected $fillable = ['name','department_id'];
+    public function participants()
 
-    public function Participants(){
+    {
 
-        return $this->hasMany('App\Models\Participant', 'municipality_id', 'id');
-
-
+    return $this->hasMany('App\Models\Participant');
 
     }
 
-    public function Department(){
-
-        return $this->belongsTo(Department::class);
-
-
+    public function department(){
+        return $this->belongsTo('App\Models\Department');
     }
 
     //use HasFactory;

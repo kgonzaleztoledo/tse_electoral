@@ -51,8 +51,8 @@
   <!-- Navigation -->
   <ul class="navbar-nav mb-md-3">
     <li class="nav-item">
-      <a class="nav-link" href="#">
-        <i class="ni ni-spaceship"></i> Getting started
+      <a class="nav-link" href="{{ url('reportes/participantes/line') }}">
+        <i class="ni ni-spaceship"></i> Graficas de Estadisticas
       </a>
     </li>
     <li class="nav-item">
