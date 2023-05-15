@@ -10,6 +10,9 @@ use App\Http\Controllers\Controller;
 
 class ChartController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
         public function appointments(){
 
 
@@ -30,7 +33,7 @@ class ChartController extends Controller
                  }
 
 
-
+           //Inicia consulta de Genero
               $sexCounts1 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
               ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
               ->where('participants.generous_id', '1' )
@@ -64,11 +67,52 @@ class ChartController extends Controller
                     $sexcounts2[$index] = $sexCount2['count'];
                  }
 
+                //finaliza consulta genero
 
 
                // dd($counts);
 
-            return view('charts.appointments', compact('counts', 'sexcounts1', 'sexcounts2'));
+
+
+           //Inicia idiomar
+              $idiomaCounts1 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
+              ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+              ->where('participants.linguistics_id', '1' )
+              ->select(
+                    DB::raw('MONTH(activity_date) as month'),
+                    DB::raw('COUNT(1) as count'))
+                    ->groupBy('month')
+                    ->get()
+                    ->toArray();
+
+                $idiomacounts1 = array_fill(0, 12, 0);
+                foreach($idiomaCounts1 as $idiomaCount1){
+                    $index = $idiomaCount1 ['month']-1;
+                    $idiomacounts1[$index] = $idiomaCount1['count'];
+                 }
+
+
+              $idiomaCounts2 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
+              ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+              ->where('participants.linguistics_id', '2' )
+              ->select(
+                    DB::raw('MONTH(activity_date) as month'),
+                    DB::raw('COUNT(1) as count'))
+                    ->groupBy('month')
+                    ->get()
+                    ->toArray();
+
+                $idiomacounts2 = array_fill(0, 12, 0);
+                foreach($idiomaCounts2 as $idiomaCount2){
+                    $index = $idiomaCount2 ['month']-1;
+                    $idiomacounts2[$index] = $idiomaCount2['count'];
+                 }
+
+
+
+
+
+               return view('charts.appointments', compact('counts', 'sexcounts1', 'sexcounts2', 'idiomacounts1', 'idiomacounts2'));
 
 
         }

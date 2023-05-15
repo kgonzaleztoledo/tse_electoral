@@ -176,7 +176,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body" >
 
                                     <nav aria-label="Page navigation example">
                                         <ul class="pagination justify-content-center">
