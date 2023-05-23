@@ -45,7 +45,7 @@
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
                                                                         Cui:
-                                                                        <input type="text" name="cui" class="form-control" placeholder="Ingrese CUI">
+                                                                        <input type="number" name="cui" class="form-control" placeholder="Ingrese CUI">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -113,7 +113,7 @@
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
                                                                         Tiene alguna discapacidad:
-                                                                        <select  name="disability" class="form-control" >
+                                                                        <select  name="disability" class="form-control" required >
                                                                             <option value="" selected disabled hidden>Selecciona Opci&oacuten</option>
                                                                             <option value="NO">NO</option>
                                                                             <option value="SI">SI</option>
@@ -131,7 +131,7 @@
                                                                     <div class="form-group">
                                                                         Tipo de discapacidad:
 
-                                                                        <select  name="type_disability" class="form-control" >
+                                                                        <select  name="type_disability" class="form-control" required >
                                                                             <option value="" selected disabled hidden>Selecciona Opci&oacuten</option>
                                                                             <option value="Ninguna">Ninguna</option>
                                                                             <option value="Discapacidad Fisica">Discapacidad Fisica</option>
