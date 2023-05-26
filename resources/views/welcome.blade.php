@@ -207,6 +207,55 @@
         </div>
       </div>
     </section>
+
+    <section class="bg-white border-b py-8">
+
+        <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+          <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+            Material de apoyo y Didáctico Elecciones Generales 2023 Guatemala
+          </h2>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                <div class="w-full font-bold text-xl text-gray-800 px-6">
+                  INSTRUCTIVO FISCALES 2023 USO DIGITAL
+                </div>
+                <div class="text-gray-800 text-base px-6 mb-5">
+                  <a href="https://capacitacionelectoral2023.org/pdf/INSTRUCTIVO%20FISCALES%202023%20USO%20DIGITAL.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
+                  <img class="w-full md:w-4/8 z-30" src="{{ asset('img/img_biblioteca/manual_fiscal.jpg') }}" />
+                  </a>
+                </div>
+
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                  DELITOS ELECTORALES
+                </div>
+                <div class="text-gray-800 text-base px-6 mb-5">
+                  <a href="https://capacitacionelectoral2023.org/pdf/Delitos%20Electorales%20FINAL.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
+                  <img class="w-full md:w-4/8 z-30" src="{{ asset('img/img_biblioteca/delitos_electorales.jpg') }}" />
+                  </a>
+                </div>
+
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                  PRESENTACION Y GUIA DEL PROCESO ELECTORAL PARA FISCALES
+                </div>
+                <div class="text-gray-800 text-base px-6 mb-5">
+                  <a href="https://capacitacionelectoral2023.org/pdf/PRESENTACION%20Y%20GUIA%20DEL%20PROCESO%20ELECTORAL%20PARA%20FISCALES.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
+                  <img class="w-full md:w-3/8 z-30" src="{{ asset('img/img_biblioteca/presentacion_guia_proceso_electoral-fiscales.jpg') }}" />
+                  </a>
+                </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
     <section class="bg-gray-100 py-8">
       <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -312,92 +361,21 @@
     </svg>
     <section class="container mx-auto text-center py-6 mb-12">
       <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-        Call to Action
+        Contactanos <a href="tel:+50223783900"><i class="fas fa-tty"> +502 2378 3900</i></a>
       </h2>
       <div class="w-full mb-4">
         <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
       <h3 class="my-4 text-3xl leading-tight">
-        Main Hero Message to sell yourself!
+        6ta avenida 1-35 zona 2, Guatemala City, Guatemala <br><i class="fas fa-envelope-open">  institutoelectoral.tse.org.gt</i>
       </h3>
+      <a href="https://www.facebook.com/InstitutoElectoralGT">
       <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        Action!
+        Ir
       </button>
+      </a>
     </section>
-    <!--Footer-->
-    <footer class="bg-white">
-      <div class="container mx-auto px-8">
-        <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 mb-6 text-black">
-            <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-              <!--Icon from: http://www.potlabicons.com/ -->
-              <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-                <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
-                <path
-                  class="plane-take-off"
-                  d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
-                />
-              </svg>
-              LANDING
-            </a>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Links</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Legal</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Social</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Company</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a>
-    </footer>
+
     <!-- jQuery if you need it
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   -->
