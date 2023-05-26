@@ -9,7 +9,7 @@ use App\Models\Department;
 use App\Models\gender;
 use App\Models\identity;
 use App\Models\linguistic;
-
+use App\Models\Type_activities;
 
 class ParticipantController extends Controller
 {
@@ -24,10 +24,11 @@ class ParticipantController extends Controller
         $generos= gender::all()->sortBy("name");
         $identitys= identity::all()->sortBy("name");
         $linguistics= linguistic::all()->sortBy("name");
+        $type_activities= Type_activities::all()->sortBy("name");
 
         // $participants = Participant::all()->sortBy("municipality_id");
         //dd($participants);
-        return view('participants.index')->with(compact('departments','municipios','generos','identitys','linguistics'));
+        return view('participants.index')->with(compact('departments','municipios','generos','identitys','linguistics','type_activities'));
 
     }
 
@@ -46,14 +47,14 @@ class ParticipantController extends Controller
         //Fin de validar
         $participant =new Participant();
         $participant->activity_date =$request->input('activity_date');
-        $participant->activity_name =$request->input('activity_name');
+        $participant->type_activities_id =$request->input('activity_name');
         $participant->name =$request->input('name');
         $participant->last_name =$request->input('last_name');
         $participant->cui =$request->input('cui');
         $participant->age =$request->input('age');
         $participant->disability =$request->input('disability');
         $participant->type_disability =$request->input('type_disability');
-        $participant->generous_id =$request->input('generous_id');
+        $participant->genders_id =$request->input('generous_id');
         $participant->identities_id =$request->input('identities_id');
         $participant->linguistics_id =$request->input('linguistics_id');
         $participant->users_id =$request->input('users_id');

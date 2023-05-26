@@ -15,7 +15,9 @@ public function department(){
     return $this->belongsTo('App\Models\Municipality');
 }
 
+public function activity(){
+    return $this->belongsTo('App\Models\Type_activities');
+}
 
-
-    use HasFactory;
+ //   use HasFactory;
 }

@@ -2,7 +2,7 @@
                                             <div class="modal-dialog modal-lg" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                <h4 class="modal-title" id="exampleModalLabel">Formulario Participantes</h4>
+                                                <h4 class="modal-title" id="exampleModalLabel"><i class="fas fa-light fa-user-plus">  Formulario Participantes</i></h4>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -16,14 +16,24 @@
                                                             <div class="row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                    Fecha Capacitaci&oacuten: <input type="date" name="activity_date" class="form-control" placeholder="Ingrese Fecha" required>
+                                                                        <i class="fas fa-chart-bar"></i>
+                                                                        <i class="fas fa-solid fa-calendar"> Fecha Capacitaci&oacuten:</i>
+                                                                     <input type="date" name="activity_date" min="2023-02-02" max="2023-06-15" class="form-control" placeholder="Ingrese Fecha" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-8">
 
                                                                     <div class="form-group">
-                                                                        Tipo de Capacitaci&oacuten:
-                                                                        <input type="text" name="activity_name" class="form-control" placeholder="Ingrese nombre de la Actividad" required>
+                                                                        <i class="fas fa-duotone fa-book"> Tipo de Capacitaci&oacuten:</i>
+
+                                                                       <select name="activity_name" class="form-control"   required>
+                                                                            <option value="">Seleccione Tipo de Capacitaci&oacuten:</option>
+                                                                                @foreach ($type_activities as $activity )
+                                                                                <option value="{{ $activity->id }}">{{ $activity->name }}</option>
+
+                                                                                @endforeach
+                                                                        </select>
+
                                                                     </div>
                                                                 </div>
 
@@ -31,28 +41,30 @@
                                                             <div class="row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                     Nombres:
+                                                                        <i class="fas fa-solid fa-user"> Nombres:</i>
+
                                                                         <input type="text" name="name" class="form-control" placeholder="Ingrese Nombres" required>
                                                                      </div>
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        Apellidos:
+                                                                        <i class="fas fa-regular fa-address-book"> Apellidos:</i>
+
                                                                         <input type="text" name="last_name" class="form-control" placeholder="Ingrese Apellidos" required>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        Cui:
-                                                                        <input type="number" name="cui" class="form-control" placeholder="Ingrese CUI">
+                                                                        <i class="fas fa-solid fa-file-signature"> Cui:</i>
+                                                                        <input type="number" name="cui" class="form-control"  max="13" placeholder="Ingrese CUI">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-md-5">
                                                                     <div class="form-group">
-                                                                     Departamento:
+                                                                        <i class="ni ni-pin-3"> Departamento:</i>
                                                                         <select name="" class="form-control" id="select-department" required>
                                                                             <option value="">Seleccione Departamento </option>
                                                                                 @foreach ($departments as $department )
@@ -64,7 +76,7 @@
                                                                 </div>
                                                                 <div class="col-md-5">
                                                                     <div class="form-group">
-                                                                        Municipio:
+                                                                        <i class="ni ni-building">  Municipio:</i>
                                                                         <select name="municipality_id" class="form-control"  id="select-municipio" required>
                                                                             <option value="" selected disabled hidden>Seleccione Municipio </option>
                                                                                 @foreach ($municipios as $municipio )
@@ -76,7 +88,8 @@
                                                                 </div>
                                                                 <div class="col-md-2">
                                                                     <div class="form-group">
-                                                                     Edad:
+
+                                                                        <i class="fas fa-shoe-prints">  Edad:</i>
                                                                         <input type="number" name="age" class="form-control" placeholder="" required>
                                                                      </div>
                                                                 </div>
@@ -88,7 +101,7 @@
                                                             <div class="row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        G&eacutenero:
+                                                                        <i class="fas fa-venus-mars"> G&eacutenero:</i>
                                                                         <select name="generous_id" class="form-control" id="select-department" required>
                                                                             <option value="">Seleccione G&eacutenero </option>
                                                                                 @foreach ($generos as $genero )
@@ -100,7 +113,8 @@
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        Identidad Cultural:
+                                                                      <i class="fas fa-user-friends"> Identidad Cultural:</i>
+
                                                                         <select name="identities_id" class="form-control" id="select-department" required>
                                                                             <option value="">Seleccione Grupo Cultural </option>
                                                                                 @foreach ($identitys as $identity )
@@ -112,7 +126,8 @@
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        Tiene alguna discapacidad:
+                                                                        <i class="fab fa-accessible-icon"> Tiene alguna discapacidad:</i>
+
                                                                         <select  name="disability" class="form-control" required >
                                                                             <option value="" selected disabled hidden>Selecciona Opci&oacuten</option>
                                                                             <option value="NO">NO</option>
@@ -129,9 +144,8 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
-                                                                        Tipo de discapacidad:
-
-                                                                        <select  name="type_disability" class="form-control" required >
+                                                                        <i class="fas fa-wheelchair"> Tipo de discapacidad:</i>
+                                                                       <select  name="type_disability" class="form-control" required >
                                                                             <option value="" selected disabled hidden>Selecciona Opci&oacuten</option>
                                                                             <option value="Ninguna">Ninguna</option>
                                                                             <option value="Discapacidad Fisica">Discapacidad Fisica</option>
@@ -146,8 +160,9 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
-                                                                     Idioma:
-                                                                     <select name="linguistics_id" class="form-control" id="select-department" required>
+
+                                                                        <i class="fas fa-globe"> Idioma:</i>
+                                                                        <select name="linguistics_id" class="form-control" id="select-department" required>
                                                                         <option value="">Seleccione Grupo Linguisticos </option>
                                                                             @foreach ($linguistics as $linguistic )
                                                                             <option value="{{ $linguistic->id }}">{{ $linguistic->name }}</option>
@@ -163,9 +178,10 @@
                                                            <input type="hidden" name="users_id" value="{{ auth()->user()->id }}">
                                                     </div>
                                             </div>
+
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                <button type="submit" class="btn btn-primary">Registrar Participante</button>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"> Cerrar</i> </button>
+                                                <button type="submit" class="btn btn-primary"><i class="fas fa-save"> Guardar Participante</i> </button>
                                             </form>
                                             </div>
                                         </div>

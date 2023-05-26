@@ -31,7 +31,7 @@
                                         </div>
                                         <div class="col text-right">
                                             <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                                Ingrese datos del Participante
+                                                <i class="fas fa-user-plus"> Ingrese datos del Participante</i>
                                             </button>
                                         </div>
 
@@ -141,8 +141,8 @@
                         name: 'id'},
                         {data:'activity_date',
                         name: 'activity_date'},
-                        {data:'activity_name',
-                        name: 'activity_name'},
+                        {data:'activity',
+                       name: 'act.name'},
                         {data:'name',
                         name: 'name'},
                         {data:'last_name',

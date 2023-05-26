@@ -5,6 +5,8 @@ use Illuminate\Http\Request;
 use App\Models\Municipality;
 use App\Models\Department;
 use App\Models\Participant;
+use App\Models\Type_activities;
+
 
 
 Route::get('/department/{id}/municipios', [App\Http\Controllers\ComboController::class, 'byDepartment'])->name('byDepartment');;
@@ -28,12 +30,14 @@ Route::get('Participants', function (){
 Route::get('Participants', function (){
 
     $participants = Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
-                            ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+                            ->join('departments as dep', 'muni.departments_id','=' ,'dep.id')
+                            ->join('type_activities as act', 'participants.type_activities_id','=' ,'act.id')
                             ->orderBy('id', 'desc')
                             ->select(
                             'participants.id',
                             'participants.activity_date',
-                            'participants.activity_name',
+                            'act.name As activity',
+                            //'participants.activity_name',
                             'participants.name',
                             'participants.last_name',
                             'participants.age',

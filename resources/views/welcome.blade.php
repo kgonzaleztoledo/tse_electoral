@@ -12,11 +12,13 @@
     <meta name="author" content="" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
     <!--Replace with your tailwind.css once created-->
+    <link href="{{ asset('js/plugins/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet" />
+
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
       .gradient {
-        background: linear-gradient(90deg, #305ce1 0%, #d3e9f6 100%);
+        background: linear-gradient(90deg, #305ce1 20%, #d3e9f6 100%);
       }
     </style>
   </head>
@@ -128,8 +130,8 @@
 
             </p>
           </div>
-          <div class="w-full sm:w-1/2 p-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2oxNksmutJk" title="YouTube video player"
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <iframe width="460" height="315" src="https://www.youtube.com/embed/2oxNksmutJk" title="YouTube video player"
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
             </iframe>
              </div>
@@ -158,81 +160,50 @@
       </div>
     </section>
     <section class="bg-white border-b py-8">
+
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Title
+          Material de apoyo y Didáctico Elecciones Generales 2023 Guatemala
         </h2>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                xGETTING STARTED
-              </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Lorem ipsum dolor sit amet.
+                INSTRUCTIVO FISCALES 2023 USO DIGITAL
               </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-              </p>
-            </a>
-          </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-start">
-              <form action="url('/login')" method="GET">
-                @csrf
-              <button type="submit"  class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-              HOla   Action
-              </button>
-              </form>
-            </div>
+              <div class="text-gray-800 text-base px-6 mb-5">
+                <a href="https://capacitacionelectoral2023.org/pdf/INSTRUCTIVO%20FISCALES%202023%20USO%20DIGITAL.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
+                <img class="w-full md:w-4/8 z-30" src="{{ asset('img/img_biblioteca/manual_fiscal.jpg') }}" />
+                </a>
+              </div>
+
           </div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                xGETTING STARTED
-              </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Lorem ipsum dolor sit amet.
+            <div class="w-full font-bold text-xl text-gray-800 px-6">
+                DELITOS ELECTORALES
               </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-              </p>
-            </a>
-          </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-center">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                Action
-              </button>
-            </div>
+              <div class="text-gray-800 text-base px-6 mb-5">
+                <a href="https://capacitacionelectoral2023.org/pdf/Delitos%20Electorales%20FINAL.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
+                <img class="w-full md:w-4/8 z-30" src="{{ asset('img/img_biblioteca/delitos_electorales.jpg') }}" />
+                </a>
+              </div>
+
           </div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                xGETTING STARTED
-              </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Lorem ipsum dolor sit amet.
+            <div class="w-full font-bold text-xl text-gray-800 px-6">
+                PRESENTACION Y GUIA DEL PROCESO ELECTORAL PARA FISCALES
               </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-              </p>
-            </a>
+              <div class="text-gray-800 text-base px-6 mb-5">
+                <a href="https://capacitacionelectoral2023.org/pdf/PRESENTACION%20Y%20GUIA%20DEL%20PROCESO%20ELECTORAL%20PARA%20FISCALES.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
+                <img class="w-full md:w-3/8 z-30" src="{{ asset('img/img_biblioteca/presentacion_guia_proceso_electoral-fiscales.jpg') }}" />
+                </a>
+              </div>
+
           </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-end">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                Action
-              </button>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
@@ -430,80 +401,81 @@
     <!-- jQuery if you need it
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   -->
-    <script>
-      var scrollpos = window.scrollY;
-      var header = document.getElementById("header");
-      var navcontent = document.getElementById("nav-content");
-      var navaction = document.getElementById("navAction");
-      var brandname = document.getElementById("brandname");
-      var toToggle = document.querySelectorAll(".toggleColour");
-      document.addEventListener("scroll", function () {
-        /*Apply classes for slide in bar*/
-        scrollpos = window.scrollY;
-        if (scrollpos > 10) {
-          header.classList.add("bg-white");
-          navaction.classList.remove("bg-white");
-          navaction.classList.add("gradient");
-          navaction.classList.remove("text-gray-800");
-          navaction.classList.add("text-white");
-          //Use to switch toggleColour colours
-          for (var i = 0; i < toToggle.length; i++) {
-            toToggle[i].classList.add("text-gray-800");
-            toToggle[i].classList.remove("text-white");
-          }
-          header.classList.add("shadow");
-          navcontent.classList.remove("bg-gray-100");
-          navcontent.classList.add("bg-white");
-        } else {
-          header.classList.remove("bg-white");
-          navaction.classList.remove("gradient");
-          navaction.classList.add("bg-white");
-          navaction.classList.remove("text-white");
-          navaction.classList.add("text-gray-800");
-          //Use to switch toggleColour colours
-          for (var i = 0; i < toToggle.length; i++) {
-            toToggle[i].classList.add("text-white");
-            toToggle[i].classList.remove("text-gray-800");
-          }
-          header.classList.remove("shadow");
-          navcontent.classList.remove("bg-white");
-          navcontent.classList.add("bg-gray-100");
+
+  </body>
+  <script>
+    var scrollpos = window.scrollY;
+    var header = document.getElementById("header");
+    var navcontent = document.getElementById("nav-content");
+    var navaction = document.getElementById("navAction");
+    var brandname = document.getElementById("brandname");
+    var toToggle = document.querySelectorAll(".toggleColour");
+    document.addEventListener("scroll", function () {
+      /*Apply classes for slide in bar*/
+      scrollpos = window.scrollY;
+      if (scrollpos > 10) {
+        header.classList.add("bg-white");
+        navaction.classList.remove("bg-white");
+        navaction.classList.add("gradient");
+        navaction.classList.remove("text-gray-800");
+        navaction.classList.add("text-white");
+        //Use to switch toggleColour colours
+        for (var i = 0; i < toToggle.length; i++) {
+          toToggle[i].classList.add("text-gray-800");
+          toToggle[i].classList.remove("text-white");
         }
-      });
-    </script>
-    <script>
-      /*Toggle dropdown list*/
-      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
-      var navMenuDiv = document.getElementById("nav-content");
-      var navMenu = document.getElementById("nav-toggle");
-      document.onclick = check;
-      function check(e) {
-        var target = (e && e.target) || (event && event.srcElement);
-        //Nav Menu
-        if (!checkParent(target, navMenuDiv)) {
-          // click NOT on the menu
-          if (checkParent(target, navMenu)) {
-            // click on the link
-            if (navMenuDiv.classList.contains("hidden")) {
-              navMenuDiv.classList.remove("hidden");
-            } else {
-              navMenuDiv.classList.add("hidden");
-            }
+        header.classList.add("shadow");
+        navcontent.classList.remove("bg-gray-100");
+        navcontent.classList.add("bg-white");
+      } else {
+        header.classList.remove("bg-white");
+        navaction.classList.remove("gradient");
+        navaction.classList.add("bg-white");
+        navaction.classList.remove("text-white");
+        navaction.classList.add("text-gray-800");
+        //Use to switch toggleColour colours
+        for (var i = 0; i < toToggle.length; i++) {
+          toToggle[i].classList.add("text-white");
+          toToggle[i].classList.remove("text-gray-800");
+        }
+        header.classList.remove("shadow");
+        navcontent.classList.remove("bg-white");
+        navcontent.classList.add("bg-gray-100");
+      }
+    });
+  </script>
+  <script>
+    /*Toggle dropdown list*/
+    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+    var navMenuDiv = document.getElementById("nav-content");
+    var navMenu = document.getElementById("nav-toggle");
+    document.onclick = check;
+    function check(e) {
+      var target = (e && e.target) || (event && event.srcElement);
+      //Nav Menu
+      if (!checkParent(target, navMenuDiv)) {
+        // click NOT on the menu
+        if (checkParent(target, navMenu)) {
+          // click on the link
+          if (navMenuDiv.classList.contains("hidden")) {
+            navMenuDiv.classList.remove("hidden");
           } else {
-            // click both outside link and outside menu, hide menu
             navMenuDiv.classList.add("hidden");
           }
+        } else {
+          // click both outside link and outside menu, hide menu
+          navMenuDiv.classList.add("hidden");
         }
       }
-      function checkParent(t, elm) {
-        while (t.parentNode) {
-          if (t == elm) {
-            return true;
-          }
-          t = t.parentNode;
+    }
+    function checkParent(t, elm) {
+      while (t.parentNode) {
+        if (t == elm) {
+          return true;
         }
-        return false;
+        t = t.parentNode;
       }
-    </script>
-  </body>
+      return false;
+    }
+  </script>
 </html>

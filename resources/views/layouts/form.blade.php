@@ -23,9 +23,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
-        <a class="navbar-brand" href="{{ url('/') }}">
-          <img src="{{ asset('img/brand/white.png') }}"  />
-        </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,22 +46,12 @@
           </div>
           <!-- Navbar items -->
           <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="{{ route('register') }}">
-                <i class="ni ni-circle-08"></i>
-                <span class="nav-link-inner--text">Registrarse</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="{{ route('login') }}">
-                <i class="ni ni-key-25"></i>
-                <span class="nav-link-inner--text">Iniciar Sesión</span>
-              </a>
-            </li>
+
+
             <li class="nav-item">
               <a class="nav-link nav-link-icon" href="{{url('/') }}">
-                <i class="ni ni-single-02"></i>
-                <span class="nav-link-inner--text">Inicio</span>
+                <i class="fas fa-home"></i>
+                <span class="nav-link-inner--text">Regresar pagina Principal</span>
               </a>
             </li>
           </ul>
@@ -105,13 +93,10 @@
                 <a href="https://gigacomnetworkgt.com/" class="nav-link" target="_blank">Gigacom Network Guatemala</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" target="_blank">About Us</a>
+                <a href="#" class="nav-link" target="_blank">Sobre nosotros</a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link" target="_blank">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link" target="_blank">MIT License</a>
               </li>
             </ul>
           </div>

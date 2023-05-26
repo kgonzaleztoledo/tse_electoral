@@ -13,7 +13,7 @@ class ComboController extends Controller
     public function byDepartment($id){
 
         // dd($id);
-         return Municipality::where('department_id', $id)->get();
+         return Municipality::where('departments_id', $id)->get();
 
 
      }
