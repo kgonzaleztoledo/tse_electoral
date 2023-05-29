@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use \Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Participant;
 use App\Models\Municipality;
@@ -34,6 +35,8 @@ class ParticipantController extends Controller
 
 
     public function sendData(Request $request){
+
+
         //Validar Campos
         $rules = [
                 'name' => 'required|min:3'
@@ -45,6 +48,10 @@ class ParticipantController extends Controller
         ];
         $this->validate($request, $rules, $messages );
         //Fin de validar
+
+        try {
+
+            DB::beginTransaction();
         $participant =new Participant();
         $participant->activity_date =$request->input('activity_date');
         $participant->type_activities_id =$request->input('activity_name');
@@ -61,9 +68,26 @@ class ParticipantController extends Controller
         $participant->municipality_id =$request->input('municipality_id');
         //dd($participant);
         $participant->save();
+
+        DB::commit();
+
+        }
+        catch(\Exception $e)
+            {
+                DB::rollback();
+
+
+                $errorsa = 'Su no. de CUI no cumple con los 13 digitos '.$participant->cui =$request->input('cui').' por favor ingrese nuevamente';
+                return redirect('participantes')->with(compact('errorsa'));
+            //You are here means that the exception occurred now do something else here.
+            }
+
         $notification = 'El Participante se registro correctamente.';
         return redirect('participantes')->with(compact('notification'));
-      }
+
+
+
+    }
 
 
     public function show($id){

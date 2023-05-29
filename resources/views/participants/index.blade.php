@@ -41,7 +41,16 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="card-body">
+                            @if(session('errorsa'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                                {{ session('errorsa') }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            @endif
 
                                      <div class="card-body">
                                         @if(session('notification'))
@@ -121,9 +130,12 @@
 @stop
 
 @section('scripts')
+
+
+
 <script src="{{ asset('js/argon-dashboard.min.js?v=1.1.2') }}"></script>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+
       <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
       <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js">    </script>
 

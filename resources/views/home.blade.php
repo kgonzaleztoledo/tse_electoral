@@ -13,7 +13,12 @@
                     </div>
                 @endif
 
-                {{ __('You are logged in!') }}
+
+                {{ __('Bienvenido :)') }} Fecha: {{ now()->toDateTimeString()  }}<br>
+            Email: {{ auth()->user()->email }}<br>
+               Puesto: {{ auth()->user()->puesto }}
+
+
             </div>
         </div>
     </div>

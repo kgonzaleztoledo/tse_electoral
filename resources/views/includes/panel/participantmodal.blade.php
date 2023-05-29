@@ -18,7 +18,7 @@
                                                                     <div class="form-group">
                                                                         <i class="fas fa-chart-bar"></i>
                                                                         <i class="fas fa-solid fa-calendar"> Fecha Capacitaci&oacuten:</i>
-                                                                     <input type="date" name="activity_date" min="2023-02-02" max="2023-06-15" class="form-control" placeholder="Ingrese Fecha" required>
+                                                                     <input type="date" name="activity_date" min="2023-02-02" max="2023-06-15" class="form-control"  required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-8">
@@ -57,7 +57,7 @@
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
                                                                         <i class="fas fa-solid fa-file-signature"> Cui:</i>
-                                                                        <input type="number" name="cui" class="form-control"  max="13" placeholder="Ingrese CUI">
+                                                                        <input type="number" name="cui" class="form-control" title= "Si no indico cui ingre 999"   placeholder="Ingrese CUI de 13 digitos" >
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -90,7 +90,7 @@
                                                                     <div class="form-group">
 
                                                                         <i class="fas fa-shoe-prints">  Edad:</i>
-                                                                        <input type="number" name="age" class="form-control" placeholder="" required>
+                                                                        <input type="number" name="age" class="form-control" title= "Si no indico edad ingrese 999" placeholder="Edad" >
                                                                      </div>
                                                                 </div>
 
@@ -101,9 +101,9 @@
                                                             <div class="row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        <i class="fas fa-venus-mars"> G&eacutenero:</i>
+                                                                        <i class="fas fa-venus-mars"> Sexo:</i>
                                                                         <select name="generous_id" class="form-control" id="select-department" required>
-                                                                            <option value="">Seleccione G&eacutenero </option>
+                                                                            <option value="">Seleccione Sexo </option>
                                                                                 @foreach ($generos as $genero )
                                                                                 <option value="{{ $genero->id }}">{{ $genero->name }}</option>
 
@@ -130,8 +130,10 @@
 
                                                                         <select  name="disability" class="form-control" required >
                                                                             <option value="" selected disabled hidden>Selecciona Opci&oacuten</option>
+
                                                                             <option value="NO">NO</option>
                                                                             <option value="SI">SI</option>
+                                                                            <option value="SI">No quiso contestar</option>
                                                                           </select>
                                                                     </div>
                                                                 </div>
@@ -155,6 +157,7 @@
                                                                             <option value="Discapacidad Multiple">Discapacidad Multiple</option>
                                                                             <option value="Discapacidad Psicosocial">Discapacidad Psicosocial</option>
                                                                             <option value="Discapacidad Mental">Discapacidad Mental</option>
+                                                                            <option value="SI">No quiso contestar</option>
                                                                           </select>
                                                                     </div>
                                                                 </div>

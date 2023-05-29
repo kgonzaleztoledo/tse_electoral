@@ -13,7 +13,7 @@
     </li>
     <li class="nav-item">
       <a class="nav-link " href="#">
-        <i class="ni ni-planet text-blue"></i> Personal de Contactos TSe
+        <i class="ni ni-planet text-blue"></i>Contactos Instituto Electoral
       </a>
     </li>
     <li class="nav-item">
@@ -22,16 +22,8 @@
       </a>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="#">
-        <i class="ni ni-bullet-list-67 text-red"></i> Genero
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">
-        <i class="ni ni-key-25 text-info"></i> Login
-      </a>
-    </li>
+
+
     <li class="nav-item">
       <a class="nav-link" href="{{ route('logout') }}"
             onclick="event.preventDefault(); document.getElementById('formLogout').submit();"
@@ -52,24 +44,24 @@
   <ul class="navbar-nav mb-md-3">
     <li class="nav-item">
       <a class="nav-link" href="{{ url('reportes/participantes/line') }}">
-        <i class="ni ni-spaceship"></i> Graficas de Estadisticas
+        <i class="ni ni-spaceship"></i> Graficas de Estadisticas Generales
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">
-        <i class="ni ni-palette"></i> Foundation
+        <i class="ni ni-palette"></i>Soporte
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">
-        <i class="ni ni-ui-04"></i> Components
+        <i class="ni ni-ui-04"></i> Configuración
       </a>
     </li>
   </ul>
   <ul class="navbar-nav">
     <li class="nav-item active active-pro">
       <a class="nav-link" href="#">
-        <i class="ni ni-send text-dark"></i> Upgrade to PRO
+        <i class="ni ni-send text-dark"></i> Licencia hasta 31-08-2023
       </a>
     </li>
   </ul>
