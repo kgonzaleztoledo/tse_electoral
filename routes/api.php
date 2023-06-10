@@ -6,7 +6,7 @@ use App\Models\Municipality;
 use App\Models\Department;
 use App\Models\Participant;
 use App\Models\Type_activities;
-
+use App\Models\User;
 
 
 Route::get('/department/{id}/municipios', [App\Http\Controllers\ComboController::class, 'byDepartment'])->name('byDepartment');;
@@ -32,10 +32,12 @@ Route::get('Participants', function (){
     $participants = Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
                             ->join('departments as dep', 'muni.departments_id','=' ,'dep.id')
                             ->join('type_activities as act', 'participants.type_activities_id','=' ,'act.id')
+                            ->join('users as digitalizador', 'participants.users_id','=' ,'digitalizador.id')
                             ->orderBy('id', 'desc')
                             ->select(
                             'participants.id',
                             'participants.activity_date',
+                            'participants.name_workshop',
                             'act.name As activity',
                             //'participants.activity_name',
                             'participants.name',
@@ -43,6 +45,7 @@ Route::get('Participants', function (){
                             'participants.age',
                             'muni.name As municipio',
                             'dep.name As departamento',
+                            'digitalizador.name As usuario',
 
                             );
 

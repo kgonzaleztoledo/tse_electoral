@@ -54,6 +54,7 @@ class ParticipantController extends Controller
             DB::beginTransaction();
         $participant =new Participant();
         $participant->activity_date =$request->input('activity_date');
+        $participant->name_workshop =$request->input('name_workshop');
         $participant->type_activities_id =$request->input('activity_name');
         $participant->name =$request->input('name');
         $participant->last_name =$request->input('last_name');

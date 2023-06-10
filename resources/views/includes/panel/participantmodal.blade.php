@@ -16,7 +16,7 @@
                                                             <div class="row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        <i class="fas fa-chart-bar"></i>
+
                                                                         <i class="fas fa-solid fa-calendar"> Fecha Capacitaci&oacuten:</i>
                                                                      <input type="date" name="activity_date" min="2023-02-02" max="2023-06-15" class="form-control"  required>
                                                                     </div>
@@ -39,18 +39,29 @@
 
                                                             </div>
                                                             <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+
+                                                                        <i class="fas fa-marker"> Nombre del Taller:</i>
+                                                                     <input type="text" name="name_workshop"  class="form-control"  style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();" required>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                            <div class="row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
                                                                         <i class="fas fa-solid fa-user"> Nombres:</i>
 
-                                                                        <input type="text" name="name" class="form-control" placeholder="Ingrese Nombres" required>
+                                                                        <input type="text" name="name" class="form-control" placeholder="Ingrese Nombres" style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                                                                      </div>
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
                                                                         <i class="fas fa-regular fa-address-book"> Apellidos:</i>
 
-                                                                        <input type="text" name="last_name" class="form-control" placeholder="Ingrese Apellidos" required>
+                                                                        <input type="text" name="last_name" class="form-control" placeholder="Ingrese Apellidos" style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                                                                     </div>
                                                                 </div>
 
@@ -76,7 +87,7 @@
                                                                 </div>
                                                                 <div class="col-md-5">
                                                                     <div class="form-group">
-                                                                        <i class="ni ni-building">  Municipio:</i>
+                                                                        <i class="ni ni-square-pin"> Municipio donde se impartio el taller:</i>
                                                                         <select name="municipality_id" class="form-control"  id="select-municipio" required>
                                                                             <option value="" selected disabled hidden>Seleccione Municipio </option>
                                                                                 @foreach ($municipios as $municipio )
@@ -157,7 +168,7 @@
                                                                             <option value="Discapacidad Multiple">Discapacidad Multiple</option>
                                                                             <option value="Discapacidad Psicosocial">Discapacidad Psicosocial</option>
                                                                             <option value="Discapacidad Mental">Discapacidad Mental</option>
-                                                                            <option value="SI">No quiso contestar</option>
+                                                                            <option value="No quiso contestar">No quiso contestar</option>
                                                                           </select>
                                                                     </div>
                                                                 </div>

@@ -18,7 +18,7 @@
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
       .gradient {
-        background: linear-gradient(90deg, #305ce1 20%, #d3e9f6 100%);
+        background: linear-gradient(90deg, #305ce1 0%, #d3e9f6 100%);
       }
     </style>
   </head>
@@ -163,7 +163,7 @@
 
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Material de apoyo y Didáctico Elecciones Generales 2023 Guatemala
+          Material Didático y de Apoyo MODULO I
         </h2>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
@@ -212,16 +212,16 @@
 
         <div class="container mx-auto flex flex-wrap pt-4 pb-12">
           <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Material de apoyo y Didáctico Elecciones Generales 2023 Guatemala
+            Material Didático y de Apoyo MODULO II
           </h2>
           <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                 <div class="w-full font-bold text-xl text-gray-800 px-6">
-                  INSTRUCTIVO FISCALES 2023 USO DIGITAL
+                    DESPLEGABLE BOLSILLO FISCAL 2023-uso digital
                 </div>
                 <div class="text-gray-800 text-base px-6 mb-5">
-                  <a href="https://capacitacionelectoral2023.org/pdf/INSTRUCTIVO%20FISCALES%202023%20USO%20DIGITAL.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
-                  <img class="w-full md:w-4/8 z-30" src="{{ asset('img/img_biblioteca/manual_fiscal.jpg') }}" />
+                  <a href="https://capacitacionelectoral2023.org/pdf/DESPLEGABLE%20BOLSILLO%20FISCAL%202023.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
+                  <img class="w-full md:w-4/8 z-30" src="{{ asset('img/img_biblioteca/DESPLEGABLE_BOLSILLO_FISCAL_2023.jpg') }}" />
                   </a>
                 </div>
 
@@ -230,11 +230,11 @@
           <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
               <div class="w-full font-bold text-xl text-gray-800 px-6">
-                  DELITOS ELECTORALES
+                ABC LEEP 2022-2023- USO DIGITAL
                 </div>
                 <div class="text-gray-800 text-base px-6 mb-5">
-                  <a href="https://capacitacionelectoral2023.org/pdf/Delitos%20Electorales%20FINAL.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
-                  <img class="w-full md:w-4/8 z-30" src="{{ asset('img/img_biblioteca/delitos_electorales.jpg') }}" />
+                  <a href="https://capacitacionelectoral2023.org/pdf/ABC%20LEEP%202022-2023-%20USO%20DIGITAL.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
+                  <img class="w-full md:w-4/8 z-30" src="{{ asset('img/img_biblioteca/ABC_LEEP_ 2022_2023_USO DIGITAL.jpg') }}" />
                   </a>
                 </div>
 
@@ -243,12 +243,15 @@
           <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
               <div class="w-full font-bold text-xl text-gray-800 px-6">
-                  PRESENTACION Y GUIA DEL PROCESO ELECTORAL PARA FISCALES
+                  VIDEO INFORMATIVO PARA JRV Y FISCALES DE ORGANIZACIONES POLÍTICASS
                 </div>
                 <div class="text-gray-800 text-base px-6 mb-5">
-                  <a href="https://capacitacionelectoral2023.org/pdf/PRESENTACION%20Y%20GUIA%20DEL%20PROCESO%20ELECTORAL%20PARA%20FISCALES.pdf" target="_blank"> <i class="fas fa-arrow-alt-circle-down"> Click para Descargar</i>
-                  <img class="w-full md:w-3/8 z-30" src="{{ asset('img/img_biblioteca/presentacion_guia_proceso_electoral-fiscales.jpg') }}" />
-                  </a>
+
+                  <video width="430" height="740" controls>
+                    <source src="{{URL::asset("video/fiscal_video.mp4.mp4")}}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+
                 </div>
 
             </div>
@@ -256,87 +259,7 @@
           </div>
         </div>
       </section>
-    <section class="bg-gray-100 py-8">
-      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Pricing
-        </h2>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Free
-              </div>
-              <ul class="w-full text-center text-sm">
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-              </ul>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                £0
-                <span class="text-base">for one user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
-              <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
-              <ul class="w-full text-center text-base font-bold">
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-              </ul>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-4xl font-bold text-center">
-                £x.99
-                <span class="text-base">/ per user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Pro
-              </div>
-              <ul class="w-full text-center text-sm">
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-              </ul>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                £x.99
-                <span class="text-base">/ per user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <!-- Change the colour #f8fafc to match the previous section colour -->
     <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

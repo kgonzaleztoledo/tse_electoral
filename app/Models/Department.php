@@ -19,6 +19,11 @@ class Department extends Model
 
     }
 
+    public function department()
+    {
+        return $this->hasManyThrough(Participant::class, Municipality::class);
+    }
+
 
    // use HasFactory;
 }

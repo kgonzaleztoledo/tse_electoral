@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Participant;
+
+use App\Models\Department;
+
+
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +29,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        {
+            $departments = Department::withCount(['municipalitys','department'])->orderBy('name', 'asc')->get();
+          ($departments);
+
+        }
+
+        $participants = Participant::count();
+        $femenino = Participant::where('genders_id', '4')->count();
+        $masculino = Participant::where('genders_id', '3')->count();
+        $otros_sex = Participant::where('genders_id', '7')  ->orWhere('genders_id', '6')->orWhere('genders_id', '5')->count();
+
+        $users = User::count();
+
+        return view('home', compact('participants', 'femenino', 'masculino','otros_sex','departments'));
     }
 }

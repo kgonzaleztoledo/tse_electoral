@@ -24,5 +24,7 @@ class Municipality extends Model
         return $this->belongsTo('App\Models\Department');
     }
 
+
+
     //use HasFactory;
 }

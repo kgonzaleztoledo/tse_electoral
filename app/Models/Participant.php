@@ -19,5 +19,12 @@ public function activity(){
     return $this->belongsTo('App\Models\Type_activities');
 }
 
- //   use HasFactory;
+
+public function user(){
+    return $this->belongsTo('App\Models\User');
+}
+
+
+
+//   use HasFactory;
 }

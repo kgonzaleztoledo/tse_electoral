@@ -83,12 +83,14 @@
                                             <tr>
                                                 <th scope="col">Id</th>
                                                 <th style="width: 20px" >Fecha</th>
-                                                <th scope="col"  >Programa de Formaci&oacuten</th>
+                                                <th scope="col"  >Nombre del taller</th>
+                                                <th scope="col"  >Programa de Categoria</th>
                                                 <th scope="col">Nombres</th>
                                                 <th scope="col">Apellidos</th>
                                                 <th scope="col">Edad</th>
                                                 <th scope="col">Municipio</th>
                                                  <th scope="col">Departamento</th>
+                                                 <th scope="col">Digitalizador</th>
                                                 <th scope="col"> &nbsp; </th>
 
 
@@ -153,8 +155,14 @@
                         name: 'id'},
                         {data:'activity_date',
                         name: 'activity_date'},
+
+                        {data:'name_workshop',
+                       name: 'name_workshop'},
+
                         {data:'activity',
                        name: 'act.name'},
+
+
                         {data:'name',
                         name: 'name'},
                         {data:'last_name',
@@ -165,6 +173,9 @@
                         name: 'muni.name'},
                       {data:'departamento',
                        name: 'dep.name'},
+
+                       {data:'usuario',
+                       name: 'digitalizador.name'},
                         {data:'btn',
                         name: 'btn'},
                      ],
