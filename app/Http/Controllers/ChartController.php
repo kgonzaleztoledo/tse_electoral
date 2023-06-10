@@ -17,7 +17,7 @@ class ChartController extends Controller
 
 
               $monthCounts =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
-              ->join('departments as dep', 'muni.departments_id','=' ,'dep.id')
+              ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
               //->where('participants.generous_id', '2' )
               ->select(
                     DB::raw('MONTH(activity_date) as month'),
@@ -35,7 +35,7 @@ class ChartController extends Controller
 
            //Inicia consulta de Genero
               $sexCounts1 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
-              ->join('departments as dep', 'muni.departments_id','=' ,'dep.id')
+              ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
               ->where('participants.genders_id', '1' )
               ->select(
                     DB::raw('MONTH(activity_date) as month'),
@@ -52,7 +52,7 @@ class ChartController extends Controller
 
 
               $sexCounts2 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
-              ->join('departments as dep', 'muni.departments_id','=' ,'dep.id')
+              ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
               ->where('participants.genders_id', '2' )
               ->select(
                     DB::raw('MONTH(activity_date) as month'),
@@ -76,7 +76,7 @@ class ChartController extends Controller
 
            //Inicia idiomar
               $idiomaCounts1 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
-              ->join('departments as dep', 'muni.departments_id','=' ,'dep.id')
+              ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
               ->where('participants.linguistics_id', '1' )
               ->select(
                     DB::raw('MONTH(activity_date) as month'),
@@ -93,7 +93,7 @@ class ChartController extends Controller
 
 
               $idiomaCounts2 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
-              ->join('departments as dep', 'muni.departments_id','=' ,'dep.id')
+              ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
               ->where('participants.linguistics_id', '2' )
               ->select(
                     DB::raw('MONTH(activity_date) as month'),
