@@ -79,12 +79,12 @@
                                     <div class="table-responsive">
                                     <!-- Projects table -->
                                     <table  id="idparticipants" class="table align-items-center table-flush">
-                                        <thead class="thead-light">
+                                        <thead class="thead-light text-nowrap">
                                             <tr>
                                                 <th scope="col">Id</th>
-                                                <th style="width: 20px" >Fecha</th>
-                                                <th scope="col"  >Nombre del taller</th>
-                                                <th scope="col"  >Programa de Categoria</th>
+                                                <th scope="col"> Fecha</th>
+                                                <th scope="col" >Nombre del taller</th>
+                                                <th scope="col">Programa de Categoria</th>
                                                 <th scope="col">Nombres</th>
                                                 <th scope="col">Apellidos</th>
                                                 <th scope="col">Edad</th>
@@ -98,9 +98,6 @@
                                         </thead>
                                         <tbody>
                                         </tbody>
-
-@include('includes.panel.editparticipantmodal')
-
 
 
                                     </table>

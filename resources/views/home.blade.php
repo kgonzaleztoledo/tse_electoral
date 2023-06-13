@@ -41,8 +41,8 @@
             </div>
             </div>
             <p class="mt-3 mb-0 text-sm">
-            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> Meta {{ $participants*100/50000 }}%</span>
-            <span class="text-nowrap">Porcentaje</span>
+            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> Meta {{ number_format ($participants*100/75000,2) }}%</span>
+            <span class="text-nowrap">Porcentaje Total</span>
             </p>
             </div>
             </div>
@@ -124,7 +124,7 @@
 
     </div>
 
-    <div class="col-md-6 mb-4">
+    <div class="col-md-4 mb-3">
         <div class="card">
 
             <div class="card-body">
@@ -134,7 +134,7 @@
             <thead class="thead-light">
 
                 <tr>
-                    <th scope="col"><center>Total de Personas Capacitadas por Departamento</center></th>
+                    <th scope="col"><center>Total de Personas Capacitadas<br> por Departamento</center></th>
                     <th scope="col"></th>
 
                   </tr>
@@ -145,7 +145,9 @@
               </tr>
             </thead>
             <tbody>
+
                 @foreach ($departments as $department)
+
                 <tr>
                     <td>{{ $department->name }}</td>
                     <td class="text-center">{{ $department->department_count }}</td>

@@ -30,8 +30,8 @@ class HomeController extends Controller
     public function index()
     {
         {
-            $departments = Department::withCount(['municipalitys','department'])->orderBy('name', 'asc')->get();
-          ($departments);
+            $departments = Department::withCount(['municipalitys','department'])->orderBy('department_count', 'desc')->get();
+       //  dd ($departments);
 
         }
 
