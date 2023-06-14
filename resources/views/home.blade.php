@@ -179,7 +179,7 @@
 
                             </tr>
                           <tr>
-                          <th scope="col">Nombre del Digigalizador</th>
+                          <th scope="col">Nombre del Digitalizador</th>
                           <th scope="col">Total</th>
 
                         </tr>
