@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Participant;
 
+
 use App\Models\Department;
 
 
@@ -35,6 +36,12 @@ class HomeController extends Controller
 
         }
 
+        {
+            $users1   = User::withCount('participants')->paginate(10);
+
+    //     dd ($users);
+        }
+
         $participants = Participant::count();
         $femenino = Participant::where('genders_id', '4')->count();
         $masculino = Participant::where('genders_id', '3')->count();
@@ -42,6 +49,6 @@ class HomeController extends Controller
 
         $users = User::count();
 
-        return view('home', compact('participants', 'femenino', 'masculino','otros_sex','departments'));
+        return view('home', compact('participants', 'femenino', 'masculino','otros_sex','departments', 'users1'));
     }
 }

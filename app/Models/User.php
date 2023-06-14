@@ -19,6 +19,8 @@ class User extends Authenticatable
     return $this->hasMany('App\Models\Participant');
 
     }
+
+
     use HasApiTokens, HasFactory, Notifiable;
 
     /**

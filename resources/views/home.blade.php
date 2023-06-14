@@ -119,56 +119,112 @@
 
         </div>
 
+<br>
+        <div class="row">
 
-
-
-    </div>
-
-    <div class="col-md-4 mb-3">
-        <div class="card">
+            <div class="col-xl-4 col-md-6">
+            <div class="card card-stats">
 
             <div class="card-body">
-                  <div class="table-responsive">
-          <!-- Projects table -->
-          <table class="table align-items-center table-flush">
-            <thead class="thead-light">
 
-                <tr>
-                    <th scope="col"><center>Total de Personas Capacitadas<br> por Departamento</center></th>
-                    <th scope="col"></th>
+                <div class="table-responsive">
+                    <!-- Projects table -->
+                    <table class="table align-items-center table-flush">
+                      <thead class="thead-light">
 
-                  </tr>
-                <tr>
-                <th scope="col">Departamento</th>
-                <th scope="col">Total</th>
+                          <tr>
+                              <th scope="col"><center>Total de Personas Capacitadas<br> por Departamento</center></th>
+                              <th scope="col"></th>
 
-              </tr>
-            </thead>
-            <tbody>
+                            </tr>
+                          <tr>
+                          <th scope="col">Departamento</th>
+                          <th scope="col">Total</th>
 
-                @foreach ($departments as $department)
+                        </tr>
+                      </thead>
+                      <tbody>
 
-                <tr>
-                    <td>{{ $department->name }}</td>
-                    <td class="text-center">{{ $department->department_count }}</td>
+                          @foreach ($departments as $department)
 
-                </tr>
-            @endforeach
+                          <tr>
+                              <td>{{ $department->name }}</td>
+                              <td class="text-center">{{ $department->department_count }}</td>
 
-            </tbody>
-          </table>
-        </div>
+                          </tr>
+                      @endforeach
+
+                      </tbody>
+                    </table>
+                  </div>
+
+            </div>
+            </div>
+            </div>
+
+
+
+            <div class="col-xl-6 col-md-6">
+            <div class="card card-stats">
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <!-- Projects table -->
+                    <table class="table align-items-center table-flush">
+                      <thead class="thead-light">
+
+                          <tr>
+                              <th scope="col"><center>Total Registro<br> por Usuario</center></th>
+                              <th scope="col"></th>
+
+                            </tr>
+                          <tr>
+                          <th scope="col">Nombre del Digigalizador</th>
+                          <th scope="col">Total</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                          @foreach ($users1 as $user1)
+
+                          <tr>
+                              <td>{{ $user1->name }}</td>
+                              <td class="text-center">{{ $user1->participants_count }}</td>
+
+                          </tr>
+                      @endforeach
+
+                      </tbody>
+                    </table>
+                    <div class="card-body">
+                        {{ $users1->links() }}
+                    </div>
+                  </div>
+
+
 
 
             </div>
+            </div>
+            </div>
+
+
+
+
+
+
+
+
+
         </div>
 
 
 
 
-
-
     </div>
+
+
 
 
 </div>

@@ -48,7 +48,7 @@ class ParticipantController extends Controller
         ];
         $this->validate($request, $rules, $messages );
         //Fin de validar
-
+         //   dd($request);
         try {
 
             DB::beginTransaction();
@@ -65,7 +65,7 @@ class ParticipantController extends Controller
         $participant->genders_id =$request->input('generous_id');
         $participant->identities_id =$request->input('identities_id');
         $participant->linguistics_id =$request->input('linguistics_id');
-        $participant->users_id =$request->input('users_id');
+        $participant->user_id =$request->input('user_id');
         $participant->municipality_id =$request->input('municipality_id');
         //dd($participant);
         $participant->save();

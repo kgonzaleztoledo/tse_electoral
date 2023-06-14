@@ -32,7 +32,7 @@ Route::get('Participants', function (){
     $participants = Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
                             ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
                             ->join('type_activities as act', 'participants.type_activities_id','=' ,'act.id')
-                            ->join('users as digitalizador', 'participants.users_id','=' ,'digitalizador.id')
+                            ->join('users as digitalizador', 'participants.user_id','=' ,'digitalizador.id')
                             ->orderBy('id', 'desc')
                             ->select(
                             'participants.id',

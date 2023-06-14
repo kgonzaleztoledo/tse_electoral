@@ -144,7 +144,7 @@
 
                                                                             <option value="NO">NO</option>
                                                                             <option value="SI">SI</option>
-                                                                            <option value="SI">No quiso contestar</option>
+                                                                            <option value="No quiso contestar">No quiso contestar</option>
                                                                           </select>
                                                                     </div>
                                                                 </div>
@@ -189,7 +189,7 @@
 
 
                                                             </div>
-                                                           <input type="hidden" name="users_id" value="{{ auth()->user()->id }}">
+                                                           <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                                                     </div>
                                             </div>
 
