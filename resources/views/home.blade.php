@@ -197,9 +197,9 @@
 
                       </tbody>
                     </table>
-                    <div class="card-body">
+
                         {{ $users1->links() }}
-                    </div>
+
                   </div>
 
 

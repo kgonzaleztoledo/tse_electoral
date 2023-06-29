@@ -37,7 +37,7 @@ class HomeController extends Controller
         }
 
         {
-            $users1   = User::withCount('participants')->paginate(10);
+            $users1   = User::withCount('participants')->orderBy('participants_count', 'desc')->paginate(2);
 
     //     dd ($users);
         }

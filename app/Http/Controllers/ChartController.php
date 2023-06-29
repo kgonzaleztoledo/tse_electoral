@@ -36,7 +36,7 @@ class ChartController extends Controller
            //Inicia consulta de Genero
               $sexCounts1 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
               ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
-              ->where('participants.genders_id', '1' )
+              ->where('participants.genders_id', '3' )
               ->select(
                     DB::raw('MONTH(activity_date) as month'),
                     DB::raw('COUNT(1) as count'))
@@ -53,7 +53,7 @@ class ChartController extends Controller
 
               $sexCounts2 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
               ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
-              ->where('participants.genders_id', '2' )
+              ->where('participants.genders_id', '4' )
               ->select(
                     DB::raw('MONTH(activity_date) as month'),
                     DB::raw('COUNT(1) as count'))
@@ -67,6 +67,57 @@ class ChartController extends Controller
                     $sexcounts2[$index] = $sexCount2['count'];
                  }
 
+
+
+                 $sexCounts3 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
+                 ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+                 ->where('participants.genders_id', '5' )
+                 ->select(
+                       DB::raw('MONTH(activity_date) as month'),
+                       DB::raw('COUNT(1) as count'))
+                       ->groupBy('month')
+                       ->get()
+                       ->toArray();
+
+                   $sexcounts3 = array_fill(0, 12, 0);
+                   foreach($sexCounts3 as $sexCount3){
+                       $index = $sexCount3 ['month']-1;
+                       $sexcounts3[$index] = $sexCount3['count'];
+                    }
+
+
+              $sexCounts4 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
+              ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+              ->where('participants.genders_id', '6' )
+              ->select(
+                    DB::raw('MONTH(activity_date) as month'),
+                    DB::raw('COUNT(1) as count'))
+                    ->groupBy('month')
+                    ->get()
+                    ->toArray();
+
+                $sexcounts4 = array_fill(0, 12, 0);
+                foreach($sexCounts4 as $sexCount4){
+                    $index = $sexCount4 ['month']-1;
+                    $sexcounts4[$index] = $sexCount4['count'];
+                 }
+
+
+              $sexCounts5 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
+              ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+              ->where('participants.genders_id', '7' )
+              ->select(
+                    DB::raw('MONTH(activity_date) as month'),
+                    DB::raw('COUNT(1) as count'))
+                    ->groupBy('month')
+                    ->get()
+                    ->toArray();
+
+                $sexcounts5 = array_fill(0, 12, 0);
+                foreach($sexCounts5 as $sexCount5){
+                    $index = $sexCount5 ['month']-1;
+                    $sexcounts5[$index] = $sexCount5['count'];
+                 }
                 //finaliza consulta genero
 
 
@@ -110,9 +161,28 @@ class ChartController extends Controller
 
 
 
+                 $idiomaCounts3 =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
+                 ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+                 ->where('participants.linguistics_id', '3' )
+                 ->select(
+                       DB::raw('MONTH(activity_date) as month'),
+                       DB::raw('COUNT(1) as count'))
+                       ->groupBy('month')
+                       ->get()
+                       ->toArray();
+
+                   $idiomacounts3 = array_fill(0, 12, 0);
+                   foreach($idiomaCounts3 as $idiomaCount3){
+                       $index = $idiomaCount3 ['month']-1;
+                       $idiomacounts3[$index] = $idiomaCount3['count'];
+                    }
 
 
-               return view('charts.appointments', compact('counts', 'sexcounts1', 'sexcounts2', 'idiomacounts1', 'idiomacounts2'));
+
+
+
+
+               return view('charts.appointments', compact('counts', 'sexcounts1', 'sexcounts2','sexcounts3', 'sexcounts4', 'sexcounts5', 'idiomacounts1', 'idiomacounts2','idiomacounts3'));
 
 
         }

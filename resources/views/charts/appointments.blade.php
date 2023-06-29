@@ -299,6 +299,20 @@ Highcharts.chart('prueba2', {
         name: 'Mujeres',
         data: @json($sexcounts2)
     }
+    ,
+    {
+        name: 'Hombre/T',
+        data: @json($sexcounts3)
+    },
+    {
+        name: 'Mujer/T',
+        data: @json($sexcounts4)
+    }
+    ,
+    {
+        name: 'No quiso contestar',
+        data: @json($sexcounts5)
+    }
 
     ]
 });
@@ -361,8 +375,8 @@ Highcharts.chart('prueba3', {
     },
 
     {
-        name: 'Kiche’',
-        data: @json($idiomacounts1)
+        name: 'Poqoman',
+        data: @json($idiomacounts3)
     }
 
     ]
