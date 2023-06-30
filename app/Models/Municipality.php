@@ -12,11 +12,17 @@ class Municipality extends Model
 {
     protected $table ="municipalities";
 
+
+
+
+
+
     public function participants()
 
     {
+        return $this->hasMany(Participant::class);
 
-    return $this->hasMany('App\Models\Participant');
+   // return $this->hasMany('App\Models\Participant');
 
     }
 

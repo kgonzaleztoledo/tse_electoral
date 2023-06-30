@@ -28,11 +28,12 @@ Route::get('participantes', [App\Http\Controllers\ParticipantController::class, 
 Route::get('participantes/create', [App\Http\Controllers\ParticipantController::class, 'create']);
 
 Route::post('participantes/dep', [App\Http\Controllers\CategoryController::class, 'sendData']);
-Route::get('participantes/{participant}/edit', [App\Http\Controllers\ParticipantController::class, 'edit'])->name('participantes.edit');
+Route::get('participantes/{id}/edit', [App\Http\Controllers\ParticipantController::class, 'edit'])->name('participantes.edit');
 //Route::get('/participantes/show', [App\Http\Controllers\ParticipantController::class, 'show'])->name('participant.show');
 Route::get('participantes/show/{id}', [App\Http\Controllers\ParticipantController::class, 'show'])->name('participantes.show');
 
-Route::put('participantes/{participant}', [App\Http\Controllers\ParticipantController::class, 'update']);
+Route::put('participantes/{participant}', [App\Http\Controllers\ParticipantController::class, 'updateParticipant']);
+
 Route::post('participantes', [App\Http\Controllers\ParticipantController::class, 'sendData']);
 
 /*Ruta para hacer reportes */

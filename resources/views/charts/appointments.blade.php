@@ -211,7 +211,7 @@ Highcharts.chart('prueba1', {
         type: 'line'
     },
     title: {
-        text: 'Total de Participante Capacitados a Nivel Nacional'
+        text: 'Total de Participante Capacitados'
     },
     subtitle: {
         text: 'Fuente: ' +
@@ -235,9 +235,27 @@ Highcharts.chart('prueba1', {
         }
     },
     series: [{
-        name: 'Participantes Registrados',
+        name: 'Total Participantes Registrados',
         data: @json($counts)
-    }, ]
+    },
+    {
+        name: 'Guatemala',
+        data: @json($guatemalas)
+    },
+    {
+        name: 'El Progreso',
+        data: @json($elprogresos)
+    },
+    {
+        name: 'Sacatepequez',
+        data: @json($sacatepequezs)
+    },
+    {
+        name: 'Chimaltenango',
+        data: @json($chimaltenangos)
+    },
+
+]
 });
 
 

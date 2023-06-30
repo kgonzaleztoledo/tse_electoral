@@ -15,7 +15,7 @@ class ChartController extends Controller
     }
         public function appointments(){
 
-
+            //serie totales
               $monthCounts =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
               ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
               //->where('participants.generous_id', '2' )
@@ -31,6 +31,79 @@ class ChartController extends Controller
                     $index = $monthCount ['month']-1;
                     $counts[$index] = $monthCount['count'];
                  }
+
+
+                 $Guatemalas =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
+                 ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+                 ->where('dep.id', '1' )
+                 ->select(
+                       DB::raw('MONTH(activity_date) as month'),
+                       DB::raw('COUNT(1) as count'))
+                       ->groupBy('month')
+                       ->get()
+                       ->toArray();
+
+                   $guatemalas = array_fill(0, 12, 0);
+                   foreach($Guatemalas as $Guatemala){
+                       $index = $Guatemala ['month']-1;
+                       $guatemalas[$index] = $Guatemala['count'];
+                    }
+
+                    $Elprogresos =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
+                    ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+                    ->where('dep.id', '2' )
+                    ->select(
+                          DB::raw('MONTH(activity_date) as month'),
+                          DB::raw('COUNT(1) as count'))
+                          ->groupBy('month')
+                          ->get()
+                          ->toArray();
+
+                      $elprogresos = array_fill(0, 12, 0);
+                      foreach($Elprogresos as $Elprogreso){
+                          $index = $Elprogreso ['month']-1;
+                          $elprogresos[$index] = $Elprogreso['count'];
+                       }
+
+                       $Sacatepequezs =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
+                       ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+                       ->where('dep.id', '3' )
+                       ->select(
+                             DB::raw('MONTH(activity_date) as month'),
+                             DB::raw('COUNT(1) as count'))
+                             ->groupBy('month')
+                             ->get()
+                             ->toArray();
+
+                         $sacatepequezs = array_fill(0, 12, 0);
+                         foreach($Sacatepequezs as $Sacatepequez){
+                             $index = $Sacatepequez ['month']-1;
+                             $sacatepequezs[$index] = $Sacatepequez['count'];
+                          }
+
+                          $Chimaltenangos =  Participant::join('municipalities as muni','participants.municipality_id','=' ,'muni.id')
+                          ->join('departments as dep', 'muni.department_id','=' ,'dep.id')
+                          ->where('dep.id', '4' )
+                          ->select(
+                                DB::raw('MONTH(activity_date) as month'),
+                                DB::raw('COUNT(1) as count'))
+                                ->groupBy('month')
+                                ->get()
+                                ->toArray();
+
+                            $chimaltenangos = array_fill(0, 12, 0);
+                            foreach($Chimaltenangos as $Chimaltenango){
+                                $index = $Chimaltenango ['month']-1;
+                                $chimaltenangos[$index] = $Chimaltenango['count'];
+                             }
+
+
+
+
+
+
+
+
 
 
            //Inicia consulta de Genero
@@ -182,7 +255,7 @@ class ChartController extends Controller
 
 
 
-               return view('charts.appointments', compact('counts', 'sexcounts1', 'sexcounts2','sexcounts3', 'sexcounts4', 'sexcounts5', 'idiomacounts1', 'idiomacounts2','idiomacounts3'));
+               return view('charts.appointments', compact('counts','guatemalas', 'elprogresos','sacatepequezs','chimaltenangos','sexcounts1', 'sexcounts2','sexcounts3', 'sexcounts4', 'sexcounts5', 'idiomacounts1', 'idiomacounts2','idiomacounts3'));
 
 
         }
